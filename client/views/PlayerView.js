@@ -9,7 +9,8 @@ var PlayerView = Backbone.View.extend({
   },
 
   events: {
-    'ended': 'ended'
+    'ended': 'ended',
+    // 'pause': 'pause'
   },
 
   setSong: function(song) {
@@ -25,4 +26,7 @@ var PlayerView = Backbone.View.extend({
     this.model.ended();
   },
 
+  // pause: function () {
+  //   console.log('Yo I paused!');
+  // }
 });
