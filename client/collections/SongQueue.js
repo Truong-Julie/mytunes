@@ -29,6 +29,7 @@ var SongQueue = Backbone.Collection.extend({
   },
 
   playFirst: function() {
+    console.log('play first song');
     this.models[0].play(); 
   },
 
