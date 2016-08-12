@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+
+/*  color: grey;*/
+}
+
+audio {
+  width: 500px;
+}
+
+table {
+  border: 1px;
+  border-style: solid;
+  border-color: silver;
+  width: 500px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
+
+}
+
+th {
+  color: navy;
+  text-align: center;
+}
+
+input {
+  width: 514px;
+  margin: 5px;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.libraryHeader, .queueHeader{
+  text-align: center;
+  /*width: 500px;*/
+}
+
+
+tr:nth-child(odd) {
+  background: #b5e7fd;
+}
+
+.artist {
+  color: black;
+}

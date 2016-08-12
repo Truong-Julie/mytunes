@@ -17,7 +17,7 @@ var SearchView = Backbone.View.extend({
     // see http://api.jquery.com/detach/
     this.$el.children().detach();
 
-    this.$el.html('<input type = "text" size = "50">');
+    this.$el.html('<input type = "text" size = "80" class="searchbar">');
   },
 
   search: function (e) {
