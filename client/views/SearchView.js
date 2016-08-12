@@ -20,8 +20,12 @@ var SearchView = Backbone.View.extend({
     this.$el.html('<input type = "text" size = "50">');
   },
 
-  search: function () {
-    // if (e.which === 13) {return;}
+  search: function (e) {
+    if (e.which === 13 || e.keycode === 13) {
+      console.log('register enter key');
+      e.preventDefault(); 
+      return false;
+    }
     this.collection['userInput'] = this.$('input').val();
     console.log('keypress', this.collection['userInput']);
     // console.log(this.collection['userInput']);
