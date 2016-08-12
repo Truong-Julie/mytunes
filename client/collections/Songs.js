@@ -3,6 +3,10 @@ var Songs = Backbone.Collection.extend({
 
   model: SongModel,
 
+  defaults: {
+    'userInput': undefined,
+  },
+
   url: 'https://api.parse.com/1/classes/songs/',
 
   initialize: function () {
@@ -11,9 +15,16 @@ var Songs = Backbone.Collection.extend({
 
   parse: function(response) {
     console.log(response.results);
-    return response.results;
+
+    // if userInput is undefinded return normal parse else filter parse
+    // userinput
+    if (this['userInput'] === undefined) {
+      return response.results;
+    } else {
+      return _.filter(response.results, function(song) {
+        return song.title.includes(this['userInput']);
+      }.bind(this));
+    }
   }
-
-
 });
 
